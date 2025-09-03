@@ -48,12 +48,12 @@ File
 # K8s
 Stdout
 
-```kubectl apply -f ```
+```kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_stdout.yml```
 
 HTTP Post
 
-```kubectl apply -f ```
+```kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_http.yml```
 
 File
 
-```kubectl apply -f ```
+```kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_file.yml```
