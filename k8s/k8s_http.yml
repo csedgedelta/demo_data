@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: training_logs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: training_logs
+  template:
+    metadata:
+      labels:
+        app: training_logs
+    spec:
+      containers:
+      - name: training_logs
+        image: chadtsigler/training-data:v1.0
+        env:
+        - name: HTTP_URL
+          value: http://example.url
