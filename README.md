@@ -1,5 +1,5 @@
 # Summary
-Writes demo logs. Both JSON and String logs are emitted.
+Writes demo logs. Both JSON and String logs are emitted.  
 
 # Options
 The application operates in 3 modes
@@ -31,6 +31,19 @@ HTTP Post
 File
 
 ```docker run -rm -d -v /var/docker/path:/var/mounted/path -e FILE_PATH=/var/mounted/path/log.txt chadtsigler/training-data:v1.0```
+
+## Compose
+Stdout
+
+```docker compose -f compose_stdout.yml up```
+
+HTTP Post
+
+```s```
+
+File
+
+```s```
 
 # K8s
 Stdout
