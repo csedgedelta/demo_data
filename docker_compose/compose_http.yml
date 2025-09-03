@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  logs:
+    image: chadtsigler/training-data:v1.0
+    environment:
+      - HTTP_URL=https://example.url
