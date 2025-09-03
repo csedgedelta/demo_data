@@ -39,21 +39,36 @@ Stdout
 
 HTTP Post
 
-```docker compose -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_http.yml up```
+```wget https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_http.yml
+#update url
+nano compose_http
+docker compose -f compose_http.yml up```
 
 File
 
-```docker compose -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_file.yml up```
+```wget https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_file.yml
+#update mounts and paths
+nano compose_file.yml
+docker compose -f compose_file.yml up```
 
 # K8s
 Stdout
 
-```kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_stdout.yml```
+```kubectl create namespace logs
+kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_stdout.yml -n logs```
 
 HTTP Post
 
-```kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_http.yml```
+```kubectl create namespace logs
+wget https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_http.yml
+#update url
+nano k8s_http.yml
+kubectl apply -f k8s_http.yml -n logs```
 
 File
 
-```kubectl apply -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_file.yml```
+```kubectl create namespace logs
+wget https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/k8s/k8s_file.yml
+#update mounts and paths
+nano k8s_file.yml
+kubectl apply -f k8s_file.yml -n logs```
