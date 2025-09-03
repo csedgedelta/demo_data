@@ -35,15 +35,15 @@ File
 ## Compose
 Stdout
 
-```docker compose -f compose_stdout.yml up```
+```docker compose -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_stdout.yml up```
 
 HTTP Post
 
-```s```
+```docker compose -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_http.yml up```
 
 File
 
-```s```
+```docker compose -f https://raw.githubusercontent.com/csedgedelta/demo_data/refs/heads/main/docker_compose/compose_file.yml up```
 
 # K8s
 Stdout
