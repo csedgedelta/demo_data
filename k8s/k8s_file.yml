@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: training_logs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: training_logs
+  template:
+    metadata:
+      labels:
+        app: training_logs
+    spec:
+      containers:
+      - name: training_logs
+        image: chadtsigler/training-data:v1.0
+        env:
+        - name: FILE_PATH
+          value: /logs/test.log
+        volumeMounts:
+        - name: log-data
+          mountPath: /logs
+  volumes:
+  - name: log-data
+    hostPath:
+      path: /var/logdata 
