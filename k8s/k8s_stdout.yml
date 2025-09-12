@@ -13,5 +13,5 @@ spec:
         app: training-logs
     spec:
       containers:
-      - name: training_logs
+      - name: training-logs
         image: chadtsigler/training-data:v1.0
