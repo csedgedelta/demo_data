@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: training_logs
+      app: training-logs
   template:
     metadata:
       labels:
-        app: training_logs
+        app: training-logs
     spec:
       containers:
-      - name: training_logs
+      - name: training-logs
         image: chadtsigler/training-data:v1.0
         env:
         - name: FILE_PATH
