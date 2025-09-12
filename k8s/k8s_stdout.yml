@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: training_logs
+  name: training-logs
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: training_logs
+      app: training-logs
   template:
     metadata:
       labels:
-        app: training_logs
+        app: training-logs
     spec:
       containers:
       - name: training_logs
